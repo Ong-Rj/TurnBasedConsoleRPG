@@ -2,6 +2,7 @@
 #include "ActionResult.h"
 #include <iostream>
 
+
 Slime::Slime(std::string name, int maxHp, int maxToughness)
     : Enemy{ std::move(name), maxHp, maxToughness }
 {
