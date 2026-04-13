@@ -68,3 +68,11 @@ const std::optional<Drop>& Enemy::getDrop() const
 {
     return m_drop;
 }
+Enemy::Enemy(std::string name, int maxHp, int maxToughness, std::optional<Drop> drop)
+    : Character{ std::move(name), maxHp }
+    , m_toughness{ maxToughness }
+    , m_maxToughness{ maxToughness }
+    , m_drop{ std::move(drop) }
+    , m_isBroken{ false }
+{
+}
